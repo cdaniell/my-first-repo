@@ -1,0 +1,104 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="my-footer.html">
+
+<dom-module id="my-Contact-Us">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      .form{
+        display: block;
+      }
+      .h1{
+        background-color: black;
+        padding: 10px;
+        display: inline-block;
+        color: white;
+        text-transform: uppercase;
+        font-family: Arial;
+        font-size: 14px;
+      }
+      .noel{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      paper-material {
+        background: white;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      paper-button {
+        background: darkgoldenrod;
+      }
+    </style>
+
+     <paper-toast id="kev" text="hello kelvin"></paper-toast>
+
+    <!--<div class="card">
+      <div class="circle">3</div>
+      <h1>Contact Us</h1>
+
+      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
+      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+    </div>-->
+
+      <paper-material elevation="5" class="noel">
+       <!--input id="input" placeholder="Email Address" type="text"/>
+        <button on-tap="send">Subscribe</button-->
+        <div class="h1">
+         <h2>Email NewsLetter</h2>
+        </div>
+        <h2>Subscribe to get a weekly newsletter from us</h2>
+        <form id="form" is="iron-form" class="form">
+          <paper-input id="name"label="First name" type="text" name="firstname"></paper-input>
+          <paper-input id="surname"label="last name" type="text" name="lastname"></paper-input>
+          <paper-input id="email"label="email" name="email" autocomplete></paper-input>
+          <paper-button on-tap="submit" raised toggles>Subscribe</paper-button>
+          
+        </form>
+        
+      </paper-material>
+
+      <my-footer></my-footer>
+
+    </template>
+
+  <script>
+    Polymer({
+      is: 'my-Contact-Us',
+
+      submit: function(){
+        var n = this.$.name.value;
+        var d = this.$.surname.value;
+        var o = this.$.email.value;
+
+        if(n == '' || d == '' || o == ''){
+          this.$.name.invalid = true;
+          this.$.kev.show({text: 'Invalid Input', duration: 5000});
+          return;
+        }
+
+        this.$.kev.open();
+      }
+    });
+  </script>
+</dom-module>

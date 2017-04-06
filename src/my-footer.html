@@ -1,0 +1,115 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-footer">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        background-color: #394550;
+      }
+      .the-footer {
+          display: flex;
+          padding: 15px;
+          background-color: #394550;
+          justify-content: space-around;
+          align-items: flex-start;
+      }
+      .the-footer h2 {
+          color: #a7adb2;
+          text-align: center;
+      }
+      .the-footer p {
+          color: white;
+          font-size: 14px;
+      }
+      .the-footer address {
+          color: white;
+          font-size: 14px;
+      }
+      paper-button {
+          background: darkgoldenrod;
+          height: 100%;
+      }
+      .copyright{
+          text-align: center;
+      }
+      .flex{
+          display: flex;
+          align-items: flex-end;
+      }
+      .flex paper-input {
+          width: 80%;
+      }ight {
+          text-align: center;
+          color: white;
+      }
+      paper-input {
+          --paper-input-container-color: #fff;
+          --paper-input-container-focus-color: #fff;
+          --paper-input-container-input-color: #fff;
+      }
+      @media(max-width: 600px){
+          .the-footer {
+              display: flex;
+              flex-direction: column;
+          }
+      }
+    </style>
+
+    <div class="the-footer">
+
+        <div>
+            <h2>Newsletter</h2>
+            <p>Keep up with our evolving trends by subscribing. Enter your email to subscribe.</p>
+            <div class="flex">
+                <paper-input id="name" label="Email Address" type="text" name="email"></paper-input>
+                <paper-button on-tap="subscribe" raised toggles>Subscribe</paper-button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Contact Us</h2>
+            <address>
+                Written by <a href="Google.com">daniel ekeleme</a>.br> 
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Aluu<br>
+                Malaysia
+            </address>
+        </div>
+
+        <div>
+            <h2>Follow Us</h2>
+            <p>You can like and follow us on the various platforms below</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">-copyright danny 2017</p>
+     
+
+    </template>
+
+  <script>
+    Polymer({
+      is: 'my-footer'
+    });
+  </script>
+</dom-module>

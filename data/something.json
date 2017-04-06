@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Basic Object-Oriented Programming in Java",
+        "date": "31/march/2017",
+        "content":"The following example demonstrates how to set the font size of an element. The fontsize property is used to control the size of fonts. Possible values could be xx-small, xsmall,small, medium, large, x-large, xx-large, smaller, larger, size in pixels or in %. p",
+        "author_name": "kelvin gobo",
+        "author_image": "../images/oli.JPG"
+    },
+    {
+        "title": "Basic Object-Oriented Programming in Java",
+        "date": "31/march/2017",
+        "content":"The following example demonstrates how to set the font size of an element. The fontsize property is used to control the size of fonts. Possible values could be xx-small, xsmall,small, medium, large, x-large, xx-large, smaller, larger, size in pixels or in %. p",
+        "author_name": "kelvin gobo",
+        "author_image": "../images/oli.JPG"
+    },
+    {
+        "title": "Basic Object-Oriented Programming in Java",
+        "date": "31/march/2017",
+        "content":"The following example demonstrates how to set the font size of an element. The fontsize property is used to control the size of fonts. Possible values could be xx-small, xsmall,small, medium, large, x-large, xx-large, smaller, larger, size in pixels or in %. p",
+        "author_name": "kelvin gobo",
+        "author_image": "../images/oli.JPG"
+    },
+    {
+        "title": "Basic Object-Oriented Programming in Java",
+        "date": "31/march/2017",
+        "content":"The following example demonstrates how to set the font size of an element. The fontsize property is used to control the size of fonts. Possible values could be xx-small, xsmall,small, medium, large, x-large, xx-large, smaller, larger, size in pixels or in %. p",
+        "author_name": "kelvin gobo",
+        "author_image": "../images/oli.JPG"
+    }
+]
